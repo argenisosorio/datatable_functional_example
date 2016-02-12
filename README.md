@@ -1,14 +1,9 @@
-########################
-##### Create by dM #####
-########################
-
-datatable_functional_example
+#Datatable Functional Example
+Create by dM
 
 based in --> ( https://www.datatables.net/ ) implementation
 
------
-
-(DataTables Table plug-in for jQuery)
+##(DataTables Table plug-in for jQuery)
 
 DataTables is a plug-in for the jQuery Javascript library.
 It is a highly flexible tool, based upon the foundations of
