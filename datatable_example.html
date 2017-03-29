@@ -1,14 +1,29 @@
 <html>
 <head>
-	<title>Jtable</title>
-	<meta charset="UTF-8">	
-	<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
-	<script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
-	<link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript">
-    	$(document).ready(function() {
-    		$('#example').DataTable();
-		} );
+    <title>Jtable</title>
+    <meta charset="UTF-8">
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example').DataTable( {
+                "language": {
+                    "lengthMenu": "Mostrar _MENU_ registros por página",
+                    "zeroRecords": "No hay datos",
+                    "info": "Mostrando página _PAGE_ de _PAGES_",
+                    "infoEmpty": "No records available",
+                    "infoFiltered": "(filtered from _MAX_ total records)",
+                    "search": "Buscar",
+                    "paginate": {
+                        "first": "Primero",
+                        "last": "Último",
+                        "next": "Siguiente",
+                        "previous": "Anterior"
+                    },
+                }
+            });
+        } );
     </script>
     <style type="text/css">
         #cuerpo1 {
@@ -23,7 +38,7 @@
 </head>
 <body>
     <div id="cuerpo1">
-    	<table border="1px" id="example" class="display" width="50%" cellspacing="0">
+        <table border="1px" id="example" class="display" width="50%" cellspacing="0">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -68,7 +83,7 @@
                     <td>66</td>
                     <td>2009/01/12</td>
                     <td>$86,000</td>
-                </tr>                
+                </tr>
                 <tr>
                     <td>Donna Snider</td>
                     <td>Customer Support</td>
