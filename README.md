@@ -15,3 +15,4 @@ controls to any HTML table.
 The .html file contains the call to .js and .css files
 and the script to load a DataTable in body tag.
 
+See Demo <a href="http://argenisosorio.github.io/datatable_functional_example/">here</a>
