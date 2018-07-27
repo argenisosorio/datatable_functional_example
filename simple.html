@@ -33,60 +33,9 @@ $(document).ready(function() {
         "previous": "Anterior"
       },
     },
-    /* Poner la columna index, es decir el contador de columnas */
-    "columnDefs": [{
-        "searchable": false,
-        "orderable": false,
-        "targets": 0
-      }],
-      "order": [[ 1, 'asc' ]]
-      });
-      t.on( 'order.dt search.dt', function () {
-        t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-          cell.innerHTML = i+1;
-        });
-      }).draw();
-    /*
-    |--------------------------------------------------
-    | Funcion que carga los botones para exportar data.
-    |--------------------------------------------------
-    */
-    new $.fn.dataTable.Buttons(t, {
-    buttons: [
-      {
-        extend: 'copyHtml5',
-      },
-      {
-        extend: 'csvHtml5',
-        fieldBoundary: '',
-        // Paŕametros que indican cuales columas se van a exportar en xls
-        exportOptions: {
-          columns: [1,2,3,4,5,6]
-        }
-      },
-      {
-        extend: 'excelHtml5',
-        // Paŕametros que indican cuales columas se van a exportar en xls
-        exportOptions: {
-          columns: [1,2,3,4,5,6]
-        }
-      },
-      {
-        extend: 'pdfHtml5',
-      },
-      {
-        extend: 'print',
-      },
-      ],
-    });
-    t.buttons().container().appendTo(t.table().container());
+  });
 });
 </script>
-<style type="text/css">
-.dt-buttons {
-    margin-top: 40px;
-}
-</style>
 </head>
 <body>
   <p>
@@ -98,7 +47,6 @@ $(document).ready(function() {
   <table id="example" class="display nowrap" cellspacing="0" width="90%">
     <thead>
       <tr>
-        <th>N</th>
         <th>Name</th>
         <th>Position</th>
         <th>Office</th>
@@ -109,7 +57,6 @@ $(document).ready(function() {
     </thead>
     <tfoot>
       <tr>
-        <th>N</th>
         <th>Name</th>
         <th>Position</th>
         <th>Office</th>
@@ -120,7 +67,6 @@ $(document).ready(function() {
     </tfoot>
     <tbody>
       <tr>
-        <td></td>
         <td>Tiger Nixon</td>
         <td>System Architect</td>
         <td>Edinburgh</td>
@@ -129,7 +75,6 @@ $(document).ready(function() {
         <td>$320,800</td>
       </tr>
       <tr>
-        <td></td>
         <td>Garrett Winters</td>
         <td>Accountant</td>
         <td>Tokyo</td>
@@ -138,7 +83,6 @@ $(document).ready(function() {
         <td>$170,750</td>
       </tr>
       <tr>
-        <td></td>
         <td>Ashton Cox</td>
         <td>Junior Technical Author</td>
         <td>San Francisco</td>
@@ -147,7 +91,6 @@ $(document).ready(function() {
         <td>$86,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Cedric Kelly</td>
         <td>Senior Javascript Developer</td>
         <td>Edinburgh</td>
@@ -156,7 +99,6 @@ $(document).ready(function() {
         <td>$433,060</td>
       </tr>
       <tr>
-        <td></td>
         <td>Airi Satou</td>
         <td>Accountant</td>
         <td>Tokyo</td>
@@ -165,7 +107,6 @@ $(document).ready(function() {
         <td>$162,700</td>
       </tr>
       <tr>
-        <td></td>
         <td>Brielle Williamson</td>
         <td>Integration Specialist</td>
         <td>New York</td>
@@ -174,7 +115,6 @@ $(document).ready(function() {
         <td>$372,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Herrod Chandler</td>
         <td>Sales Assistant</td>
         <td>San Francisco</td>
@@ -183,7 +123,6 @@ $(document).ready(function() {
         <td>$137,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Rhona Davidson</td>
         <td>Integration Specialist</td>
         <td>Tokyo</td>
@@ -192,7 +131,6 @@ $(document).ready(function() {
         <td>$327,900</td>
       </tr>
       <tr>
-        <td></td>
         <td>Colleen Hurst</td>
         <td>Javascript Developer</td>
         <td>San Francisco</td>
@@ -201,7 +139,6 @@ $(document).ready(function() {
         <td>$205,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Sonya Frost</td>
         <td>Software Engineer</td>
         <td>Edinburgh</td>
@@ -210,7 +147,6 @@ $(document).ready(function() {
         <td>$103,600</td>
       </tr>
       <tr>
-        <td></td>
         <td>Jena Gaines</td>
         <td>Office Manager</td>
         <td>London</td>
@@ -219,7 +155,6 @@ $(document).ready(function() {
         <td>$90,560</td>
       </tr>
       <tr>
-        <td></td>
         <td>Quinn Flynn</td>
         <td>Support Lead</td>
         <td>Edinburgh</td>
@@ -228,7 +163,6 @@ $(document).ready(function() {
         <td>$342,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Charde Marshall</td>
         <td>Regional Director</td>
         <td>San Francisco</td>
@@ -237,7 +171,6 @@ $(document).ready(function() {
         <td>$470,600</td>
       </tr>
       <tr>
-        <td></td>
         <td>Haley Kennedy</td>
         <td>Senior Marketing Designer</td>
         <td>London</td>
@@ -246,7 +179,6 @@ $(document).ready(function() {
         <td>$313,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Tatyana Fitzpatrick</td>
         <td>Regional Director</td>
         <td>London</td>
@@ -255,7 +187,6 @@ $(document).ready(function() {
         <td>$385,750</td>
       </tr>
       <tr>
-        <td></td>
         <td>Michael Silva</td>
         <td>Marketing Designer</td>
         <td>London</td>
@@ -264,7 +195,6 @@ $(document).ready(function() {
         <td>$198,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Paul Byrd</td>
         <td>Chief Financial Officer (CFO)</td>
         <td>New York</td>
@@ -273,7 +203,6 @@ $(document).ready(function() {
         <td>$725,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Gloria Little</td>
         <td>Systems Administrator</td>
         <td>New York</td>
@@ -282,7 +211,6 @@ $(document).ready(function() {
         <td>$237,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Bradley Greer</td>
         <td>Software Engineer</td>
         <td>London</td>
@@ -291,7 +219,6 @@ $(document).ready(function() {
         <td>$132,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Dai Rios</td>
         <td>Personnel Lead</td>
         <td>Edinburgh</td>
@@ -300,7 +227,6 @@ $(document).ready(function() {
         <td>$217,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Jenette Caldwell</td>
         <td>Development Lead</td>
         <td>New York</td>
@@ -309,7 +235,6 @@ $(document).ready(function() {
         <td>$345,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Yuri Berry</td>
         <td>Chief Marketing Officer (CMO)</td>
         <td>New York</td>
@@ -318,7 +243,6 @@ $(document).ready(function() {
         <td>$675,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Caesar Vance</td>
         <td>Pre-Sales Support</td>
         <td>New York</td>
@@ -327,7 +251,6 @@ $(document).ready(function() {
         <td>$106,450</td>
       </tr>
       <tr>
-        <td></td>
         <td>Doris Wilder</td>
         <td>Sales Assistant</td>
         <td>Sidney</td>
@@ -336,7 +259,6 @@ $(document).ready(function() {
         <td>$85,600</td>
       </tr>
       <tr>
-        <td></td>
         <td>Angelica Ramos</td>
         <td>Chief Executive Officer (CEO)</td>
         <td>London</td>
@@ -345,7 +267,6 @@ $(document).ready(function() {
         <td>$1,200,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Gavin Joyce</td>
         <td>Developer</td>
         <td>Edinburgh</td>
@@ -354,7 +275,6 @@ $(document).ready(function() {
         <td>$92,575</td>
       </tr>
       <tr>
-        <td></td>
         <td>Jennifer Chang</td>
         <td>Regional Director</td>
         <td>Singapore</td>
@@ -363,7 +283,6 @@ $(document).ready(function() {
         <td>$357,650</td>
       </tr>
       <tr>
-        <td></td>
         <td>Brenden Wagner</td>
         <td>Software Engineer</td>
         <td>San Francisco</td>
@@ -372,7 +291,6 @@ $(document).ready(function() {
         <td>$206,850</td>
       </tr>
       <tr>
-        <td></td>
         <td>Fiona Green</td>
         <td>Chief Operating Officer (COO)</td>
         <td>San Francisco</td>
@@ -381,7 +299,6 @@ $(document).ready(function() {
         <td>$850,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Shou Itou</td>
         <td>Regional Marketing</td>
         <td>Tokyo</td>
@@ -390,7 +307,6 @@ $(document).ready(function() {
         <td>$163,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Michelle House</td>
         <td>Integration Specialist</td>
         <td>Sidney</td>
@@ -399,7 +315,6 @@ $(document).ready(function() {
         <td>$95,400</td>
       </tr>
       <tr>
-        <td></td>
         <td>Suki Burks</td>
         <td>Developer</td>
         <td>London</td>
@@ -408,7 +323,6 @@ $(document).ready(function() {
         <td>$114,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Prescott Bartlett</td>
         <td>Technical Author</td>
         <td>London</td>
@@ -417,7 +331,6 @@ $(document).ready(function() {
         <td>$145,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Gavin Cortez</td>
         <td>Team Leader</td>
         <td>San Francisco</td>
@@ -426,7 +339,6 @@ $(document).ready(function() {
         <td>$235,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Martena Mccray</td>
         <td>Post-Sales support</td>
         <td>Edinburgh</td>
@@ -435,7 +347,6 @@ $(document).ready(function() {
         <td>$324,050</td>
       </tr>
       <tr>
-        <td></td>
         <td>Unity Butler</td>
         <td>Marketing Designer</td>
         <td>San Francisco</td>
@@ -444,7 +355,6 @@ $(document).ready(function() {
         <td>$85,675</td>
       </tr>
       <tr>
-        <td></td>
         <td>Howard Hatfield</td>
         <td>Office Manager</td>
         <td>San Francisco</td>
@@ -453,7 +363,6 @@ $(document).ready(function() {
         <td>$164,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Hope Fuentes</td>
         <td>Secretary</td>
         <td>San Francisco</td>
@@ -462,7 +371,6 @@ $(document).ready(function() {
         <td>$109,850</td>
       </tr>
       <tr>
-        <td></td>
         <td>Vivian Harrell</td>
         <td>Financial Controller</td>
         <td>San Francisco</td>
@@ -471,7 +379,6 @@ $(document).ready(function() {
         <td>$452,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Timothy Mooney</td>
         <td>Office Manager</td>
         <td>London</td>
@@ -480,7 +387,6 @@ $(document).ready(function() {
         <td>$136,200</td>
       </tr>
       <tr>
-        <td></td>
         <td>Jackson Bradshaw</td>
         <td>Director</td>
         <td>New York</td>
@@ -489,7 +395,6 @@ $(document).ready(function() {
         <td>$645,750</td>
       </tr>
       <tr>
-        <td></td>
         <td>Olivia Liang</td>
         <td>Support Engineer</td>
         <td>Singapore</td>
@@ -498,7 +403,6 @@ $(document).ready(function() {
         <td>$234,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Bruno Nash</td>
         <td>Software Engineer</td>
         <td>London</td>
@@ -507,7 +411,6 @@ $(document).ready(function() {
         <td>$163,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Sakura Yamamoto</td>
         <td>Support Engineer</td>
         <td>Tokyo</td>
@@ -516,7 +419,6 @@ $(document).ready(function() {
         <td>$139,575</td>
       </tr>
       <tr>
-        <td></td>
         <td>Thor Walton</td>
         <td>Developer</td>
         <td>New York</td>
@@ -525,7 +427,6 @@ $(document).ready(function() {
         <td>$98,540</td>
       </tr>
       <tr>
-        <td></td>
         <td>Finn Camacho</td>
         <td>Support Engineer</td>
         <td>San Francisco</td>
@@ -534,7 +435,6 @@ $(document).ready(function() {
         <td>$87,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Serge Baldwin</td>
         <td>Data Coordinator</td>
         <td>Singapore</td>
@@ -543,7 +443,6 @@ $(document).ready(function() {
         <td>$138,575</td>
       </tr>
       <tr>
-        <td></td>
         <td>Zenaida Frank</td>
         <td>Software Engineer</td>
         <td>New York</td>
@@ -552,7 +451,6 @@ $(document).ready(function() {
         <td>$125,250</td>
       </tr>
       <tr>
-        <td></td>
         <td>Zorita Serrano</td>
         <td>Software Engineer</td>
         <td>San Francisco</td>
@@ -561,7 +459,6 @@ $(document).ready(function() {
         <td>$115,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Jennifer Acosta</td>
         <td>Junior Javascript Developer</td>
         <td>Edinburgh</td>
@@ -570,7 +467,6 @@ $(document).ready(function() {
         <td>$75,650</td>
       </tr>
       <tr>
-        <td></td>
         <td>Cara Stevens</td>
         <td>Sales Assistant</td>
         <td>New York</td>
@@ -579,7 +475,6 @@ $(document).ready(function() {
         <td>$145,600</td>
       </tr>
       <tr>
-        <td></td>
         <td>Hermione Butler</td>
         <td>Regional Director</td>
         <td>London</td>
@@ -588,7 +483,6 @@ $(document).ready(function() {
         <td>$356,250</td>
       </tr>
       <tr>
-        <td></td>
         <td>Lael Greer</td>
         <td>Systems Administrator</td>
         <td>London</td>
@@ -597,7 +491,6 @@ $(document).ready(function() {
         <td>$103,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Jonas Alexander</td>
         <td>Developer</td>
         <td>San Francisco</td>
@@ -606,7 +499,6 @@ $(document).ready(function() {
         <td>$86,500</td>
       </tr>
       <tr>
-        <td></td>
         <td>Shad Decker</td>
         <td>Regional Director</td>
         <td>Edinburgh</td>
@@ -615,7 +507,6 @@ $(document).ready(function() {
         <td>$183,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Michael Bruce</td>
         <td>Javascript Developer</td>
         <td>Singapore</td>
@@ -624,7 +515,6 @@ $(document).ready(function() {
         <td>$183,000</td>
       </tr>
       <tr>
-        <td></td>
         <td>Donna Snider</td>
         <td>Customer Support</td>
         <td>New York</td>
